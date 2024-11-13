@@ -1,0 +1,61 @@
+name: kelompok
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  assets: ^0.0.1
+  firebase_analytics: ^11.3.4
+  firebase_auth: ^5.3.2
+  firebase_core: ^3.7.0
+  flat_banners: ^0.0.6
+  flaticon_downloader: ^0.0.2
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  gpt_draggable_fab: ^0.0.2
+  http: ^1.2.2
+  image_picker: ^1.1.1
+  observer: ^0.0.1
+  path_provider: ^2.1.5
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
+  sqflite: ^2.3.3+1
+  sqflite_common_ffi: ^2.3.4
+  uuid: ^4.4.0
+  win32: ^5.0.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.9.2
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/logo.png
+    - assets/home.jpg
+    - assets/lonceng.png
+    - assets/profil.jpg
+    - assets/koin.png
+    - assets/home1.jpg
+    - assets/home2.jpg
+    - assets/home3.jpg
+    - assets/machiato.jpg
+    - assets/fab.jpg
+    - assets/banner.png
+    - assets/dana.jpg
+    - assets/gopay.png
+    - assets/ovo.png
+    - assets/tunai.png
+    - assets/shopee.png
