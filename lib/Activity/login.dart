@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
               height: imageHeight,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/logo.png'),
+                  image: NetworkImage('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/logo.png?alt=media&token=25652bcb-ad63-44aa-8380-07a363ebcdbb'),
                   fit: BoxFit.cover,
                 ),
               ),

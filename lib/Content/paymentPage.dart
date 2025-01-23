@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok/Provider/notification_service.dart';
 import 'package:provider/provider.dart';
 
 import '../Activity/dashboard.dart';
@@ -44,23 +45,32 @@ class _paymentPageState extends State<paymentPage> {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Divider(thickness: 1.5),
-            _buildPaymentOption('assets/tunai.png', 'Tunai', 'tunai'),
-            _buildPaymentOption('assets/dana.jpg', 'Dana', 'dana'),
-            _buildPaymentOption('assets/shopee.png', 'Shopeepay', 'shopeepay'),
-            _buildPaymentOption('assets/gopay.png', 'GoPay', 'gopay'),
-            _buildPaymentOption('assets/ovo.png', 'OVO', 'ovo'),
+            _buildPaymentOption('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/tunai.png?alt=media&token=0f0e9f06-2f6c-4dad-8552-f545ab8a3b97', 'Tunai', 'tunai'),
+            _buildPaymentOption('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/dana.jpg?alt=media&token=796f68a3-9abe-412c-bec5-cbbef2d16f51', 'Dana', 'dana'),
+            _buildPaymentOption('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/shopee.png?alt=media&token=bdf253b8-b1ac-4020-a1a0-957733705106', 'Shopeepay', 'shopeepay'),
+            _buildPaymentOption('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/gopay.png?alt=media&token=cbb6cf2a-38ec-43b9-90d1-7fdc9cf99bce', 'GoPay', 'gopay'),
+            _buildPaymentOption('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/ovo.png?alt=media&token=e44eb3a1-553e-4aeb-9880-ac69976e61a1', 'OVO', 'ovo'),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 if (_selectedPaymentMethod != null) {
                   _showLoadingDialog(context);
-                  Future.delayed(Duration(seconds: 2), () {
+                  await Future.delayed(Duration(seconds: 2), () async {
                     Provider.of<myProv>(context, listen: false).bnIndex = 1;
                     Provider.of<myProv>(context, listen: false).clearCart();
+
+                    // Tampilkan notifikasi
+                    await NotificationService().showNotification(
+                      'Pembayaran Berhasil',
+                      'Metode pembayaran $_selectedPaymentMethod berhasil digunakan!',
+                    );
+
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('Pembayaran $_selectedPaymentMethod berhasil!'),
+                        content: Text(
+                            'Pembayaran $_selectedPaymentMethod berhasil!'),
                       ),
                     );
+
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(builder: (context) => myHome()),
@@ -94,7 +104,7 @@ class _paymentPageState extends State<paymentPage> {
 
   Widget _buildPaymentOption(String imagePath, String title, String value) {
     return ListTile(
-      leading: Image.asset(
+      leading: Image.network(
         imagePath,
         width: 40,
         height: 40,

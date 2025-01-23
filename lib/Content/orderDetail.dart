@@ -253,7 +253,7 @@ class DeliveryPage extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                image: AssetImage('assets/machiato.jpg'),
+                image: NetworkImage('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/machiato.jpg?alt=media&token=e02d989f-22f3-4460-a7db-47792b922ea1'),
                 fit: BoxFit.contain,
               ),
             ),
@@ -481,7 +481,7 @@ class PickupPage extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                image: AssetImage('assets/machiato.jpg'),
+                image: NetworkImage('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/machiato.jpg?alt=media&token=e02d989f-22f3-4460-a7db-47792b922ea1'),
                 fit: BoxFit.contain,
               ),
             ),

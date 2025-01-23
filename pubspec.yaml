@@ -1,21 +1,25 @@
 name: kelompok
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.3.1 <4.0.0'
+  sdk: ">=3.3.1 <4.0.0"
 
 dependencies:
   assets: ^0.0.1
   firebase_analytics: ^11.3.4
   firebase_auth: ^5.3.2
   firebase_core: ^3.7.0
+  firebase_messaging: ^15.2.0
+  firebase_performance: ^0.10.1
   flat_banners: ^0.0.6
   flaticon_downloader: ^0.0.2
   flutter:
     sdk: flutter
+  flutter_local_notifications: ^18.0.1
   google_fonts: ^6.2.1
+  google_mobile_ads: ^5.2.0
   gpt_draggable_fab: ^0.0.2
   http: ^1.2.2
   image_picker: ^1.1.1
@@ -43,8 +47,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/logo.png
-    - assets/home.jpg
+    # - assets/logo.png
+    # - assets/home.jpg
     - assets/lonceng.png
     - assets/profil.jpg
     - assets/koin.png

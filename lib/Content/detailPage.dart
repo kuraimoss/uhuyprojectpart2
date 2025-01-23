@@ -60,7 +60,7 @@ class _DetailPageState extends State<DetailPage> {
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                     ),
-                    child: Image.asset(
+                    child: Image.network(
                       widget.item.imagePath,
                       fit: BoxFit.cover,
                     ),

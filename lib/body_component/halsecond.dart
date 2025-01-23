@@ -15,10 +15,10 @@ class HalSecond extends StatefulWidget {
 
 class _HalSecondState extends State<HalSecond> {
   final List<String> imagePaths = [
-    'assets/home1.jpg',
-    'assets/home2.jpg',
-    'assets/home3.jpg',
-    'assets/home2.jpg',
+    'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home1.jpg?alt=media&token=d1cb5ca9-4ff7-4a27-85c0-13d4f066bbfd',
+    'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home2.jpg?alt=media&token=9c978b55-3b76-4f94-b00d-bad8b4530242',
+    'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
+    'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home2.jpg?alt=media&token=9c978b55-3b76-4f94-b00d-bad8b4530242',
   ];
 
   final PageController _pageController = PageController();
@@ -44,8 +44,8 @@ class _HalSecondState extends State<HalSecond> {
           flexibleSpace: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(
-                'assets/home.jpg',
+              Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home.jpg?alt=media&token=0c58f40f-29f0-4117-a3eb-c6c84e1da356',
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -87,8 +87,8 @@ class _HalSecondState extends State<HalSecond> {
                     child: Container(
                       width: 40,
                       height: 40,
-                      child: Image.asset(
-                        'assets/lonceng.png',
+                      child: Image.network(
+                        'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/lonceng.png?alt=media&token=adb29f4c-d62e-45b7-bcad-2fd40d464b27',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -111,8 +111,8 @@ class _HalSecondState extends State<HalSecond> {
                     children: [
                       SizedBox(width: 20),
                       ClipOval(
-                        child: Image.asset(
-                          'assets/profil.jpg',
+                        child: Image.network(
+                          'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0',
                           width: 40,
                           height: 40,
                           fit: BoxFit.cover,
@@ -128,8 +128,8 @@ class _HalSecondState extends State<HalSecond> {
                         ),
                       ),
                       SizedBox(width: 140),
-                      Image.asset(
-                        'assets/koin.png',
+                      Image.network(
+                        'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/koin.png?alt=media&token=c429fdf2-79a4-4cb7-9211-6d258c9e08c2',
                         width: 55,
                         height: 25,
                         fit: BoxFit.cover,
@@ -192,7 +192,7 @@ class _HalSecondState extends State<HalSecond> {
                 itemCount: imagePaths.length,
                 itemBuilder: (context, index) {
                   return Center(
-                    child: Image.asset(
+                    child: Image.network(
                       imagePaths[index],
                       width: 350,
                       height: 170,

@@ -15,8 +15,8 @@ class WishlistPage extends StatelessWidget {
           flexibleSpace: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(
-                'assets/home.jpg',
+              Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home.jpg?alt=media&token=0c58f40f-29f0-4117-a3eb-c6c84e1da356',
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -119,7 +119,7 @@ class WishlistPage extends StatelessWidget {
                           padding: EdgeInsets.only(right: 10.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
+                            child: Image.network(
                               item.imagePath,
                               width: 150,
                               fit: BoxFit.contain,
@@ -234,7 +234,7 @@ class WishlistPage extends StatelessWidget {
         size: 'Regular',
         iceLevel: 'Normal',
         syrup: 'None',
-        imagePath: 'assets/home2.jpg',
+        imagePath: 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home2.jpg?alt=media&token=9c978b55-3b76-4f94-b00d-bad8b4530242',
         description: 'Perpaduan arabica coffee dengan susu UHT',
       ),
       CartItem(
@@ -245,7 +245,7 @@ class WishlistPage extends StatelessWidget {
         size: 'Regular',
         iceLevel: 'Normal',
         syrup: 'None',
-        imagePath: 'assets/machiato.jpg',
+        imagePath: 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/machiato.jpg?alt=media&token=e02d989f-22f3-4460-a7db-47792b922ea1',
         description: 'Perpaduan arabica coffee dengan susu karamel',
       ),
       CartItem(
@@ -256,7 +256,7 @@ class WishlistPage extends StatelessWidget {
         size: 'Regular',
         iceLevel: 'Normal',
         syrup: 'None',
-        imagePath: 'assets/home3.jpg',
+        imagePath: 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         description: 'Coffe 100% Arabica',
       ),
     ];

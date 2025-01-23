@@ -49,8 +49,8 @@ class _MyMenuState extends State<MyMenu> {
           flexibleSpace: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(
-                'assets/home.jpg',
+              Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home.jpg?alt=media&token=0c58f40f-29f0-4117-a3eb-c6c84e1da356',
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -174,7 +174,7 @@ class _MyMenuState extends State<MyMenu> {
             Divider(color: Colors.grey, thickness: 1),
             _buildMenuItem(
                 '2',
-                'assets/machiato.jpg',
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/machiato.jpg?alt=media&token=e02d989f-22f3-4460-a7db-47792b922ea1',
                 'Cappucino Latte',
                 'Perpaduan arabica coffee dengan susu karamel',
                 'Rp 20.000',
@@ -182,13 +182,13 @@ class _MyMenuState extends State<MyMenu> {
             Divider(color: Colors.grey, thickness: 1),
             _buildMenuItem(
                 '1',
-                'assets/home2.jpg',
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home2.jpg?alt=media&token=9c978b55-3b76-4f94-b00d-bad8b4530242',
                 'Coffe Latte',
                 'Perpaduan arabica coffee dengan susu UHT',
                 'Rp 25.000',
                 cartProvider),
             Divider(color: Colors.grey, thickness: 1),
-            _buildMenuItem('3', 'assets/home3.jpg', 'Americano Coffee',
+            _buildMenuItem('3', 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79', 'Americano Coffee',
                 'Coffe 100% Arabica', 'Rp 15.000', cartProvider),
             Divider(color: Colors.grey, thickness: 1),
           ],
@@ -298,7 +298,7 @@ class _MyMenuState extends State<MyMenu> {
             padding: EdgeInsets.only(right: 10.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
+              child: Image.network(
                 imagePath,
                 width: 150,
                 fit: BoxFit.contain,

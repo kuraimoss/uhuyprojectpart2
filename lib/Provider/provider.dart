@@ -14,7 +14,7 @@ class myProv extends ChangeNotifier {
   String _phoneNumber = '';
   DateTime _birthDate = DateTime(2000, 1, 1);
   String _gender = 'Male';
-  String _profileImagePath = 'assets/profil.jpg';
+  String _profileImagePath = 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0';
   bool _isDarkMode = false;
   bool _showBanner = true;
   final List<CartItem> _cartItems = [];
@@ -104,7 +104,7 @@ class myProv extends ChangeNotifier {
     _birthDate = DateTime.parse(prefs.getString('birthDate') ?? '2000-01-01');
     _gender = prefs.getString('gender') ?? 'Male';
     _profileImagePath =
-        prefs.getString('profileImagePath') ?? 'assets/profil.jpg';
+        prefs.getString('profileImagePath') ?? 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0';
     notifyListeners();
   }
 

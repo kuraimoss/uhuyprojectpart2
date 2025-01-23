@@ -59,7 +59,7 @@ class _MyProfileState extends State<MyProfile> {
                   radius: 50,
                   backgroundImage: _image != null
                       ? FileImage(_image!)
-                      : AssetImage('assets/profil.jpg')
+                      : NetworkImage('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0')
                           as ImageProvider<Object>?,
                 ),
                 SizedBox(height: 20),
@@ -235,7 +235,7 @@ class _EditProfileState extends State<EditProfile> {
                   radius: 50,
                   backgroundImage: _image != null
                       ? FileImage(_image!)
-                      : AssetImage('assets/profil.jpg')
+                      : NetworkImage('https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0')
                           as ImageProvider<Object>?,
                 ),
                 SizedBox(width: 20),
@@ -385,7 +385,7 @@ class _EditProfileState extends State<EditProfile> {
         final profileProvider = Provider.of<myProv>(context, listen: false);
         String defaultImagePath = profileProvider.profileImagePath;
 
-        if (defaultImagePath == 'assets/profil.jpg' ||
+        if (defaultImagePath == 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/profil.jpg?alt=media&token=13735378-4aa8-46a7-95e0-c9a345eedae0' ||
             defaultImagePath.isEmpty) {
           _image = null;
         } else {

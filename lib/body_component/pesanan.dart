@@ -47,8 +47,8 @@ class _PesananPageState extends State<PesananPage>
           flexibleSpace: Stack(
             fit: StackFit.expand,
             children: [
-              Image.asset(
-                'assets/home.jpg',
+              Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home.jpg?alt=media&token=0c58f40f-29f0-4117-a3eb-c6c84e1da356',
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -138,7 +138,7 @@ class _PesananPageState extends State<PesananPage>
   Widget _buildPesananTab(String type) {
     List<Map<String, String>> pesananList = [
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -147,7 +147,7 @@ class _PesananPageState extends State<PesananPage>
         'statusText': 'Pick Up',
       },
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -156,7 +156,7 @@ class _PesananPageState extends State<PesananPage>
         'statusText': 'Pick Up',
       },
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -165,7 +165,7 @@ class _PesananPageState extends State<PesananPage>
         'statusText': 'Pick Up',
       },
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -174,7 +174,7 @@ class _PesananPageState extends State<PesananPage>
         'statusText': 'Delivery',
       },
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -183,7 +183,7 @@ class _PesananPageState extends State<PesananPage>
         'statusText': 'Delivery',
       },
       {
-        'imagePath': 'assets/machiato.jpg',
+        'imagePath': 'https://firebasestorage.googleapis.com/v0/b/kesayangancoffe.firebasestorage.app/o/home3.jpg?alt=media&token=82cacdca-2eef-4c21-8342-8b2498f5eb79',
         'title': 'American Coffee, Ekspresso',
         'quantity': '2 Item',
         'price': 'Rp. 50.000',
@@ -264,7 +264,7 @@ class _PesananPageState extends State<PesananPage>
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
+              Image.network(
                 imagePath,
                 width: 80,
                 height: 80,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart'; // Import AdMob
 import '../Provider/provider.dart';
 import '../body_component/halsecond.dart';
 import '../body_component/menu.dart';
@@ -22,16 +23,64 @@ class _myHomeState extends State<myHome> {
   ];
   late PageController _pageController;
 
+  // Deklarasi Interstitial Ad
+  late InterstitialAd _interstitialAd;
+  bool _isInterstitialAdReady = false;
+
   @override
   void initState() {
     super.initState();
+
+    // Inisialisasi PageController
     final provider = Provider.of<myProv>(context, listen: false);
     _pageController = PageController(initialPage: provider.bnIndex);
+
+    // Memuat iklan interstitial
+    _loadInterstitialAd();
+  }
+
+  void _loadInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: 'ca-app-pub-3940256099942544/1033173712', // Ganti dengan ID Unit Iklan Anda
+      request: AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (InterstitialAd ad) {
+          _interstitialAd = ad;
+          _isInterstitialAdReady = true;
+
+          // Menampilkan iklan jika sudah siap
+          _showInterstitialAd();
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          print('Failed to load interstitial ad: $error');
+        },
+      ),
+    );
+  }
+
+  void _showInterstitialAd() {
+    if (_isInterstitialAdReady) {
+      _interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (InterstitialAd ad) {
+          ad.dispose();
+          print('Interstitial Ad dismissed.');
+        },
+        onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
+          ad.dispose();
+          print('Failed to show interstitial ad: $error');
+        },
+      );
+
+      _interstitialAd.show();
+    }
   }
 
   @override
   void dispose() {
     _pageController.dispose();
+    if (_isInterstitialAdReady) {
+      _interstitialAd.dispose();
+    }
     super.dispose();
   }
 
